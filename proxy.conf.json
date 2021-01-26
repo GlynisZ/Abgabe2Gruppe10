@@ -1,0 +1,9 @@
+{
+  "/kunden": {
+    "target": "http://localhost",
+    "secure": false,
+    "pathRewrite": {
+      "^/kunden": "/kunden/api"
+    }
+  }
+}
