@@ -7,10 +7,10 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
-import {MatFormFieldModule} from '@angular/material/form-field';
-import {MatSelectModule} from '@angular/material/select';
-import {MatRadioModule} from '@angular/material/radio';
-import {MatCheckboxModule} from '@angular/material/checkbox';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatSelectModule } from '@angular/material/select';
+import { MatRadioModule } from '@angular/material/radio';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 import { AppModule } from 'src/app/app.module';
 
 import { NavComponent } from './nav.component';
@@ -43,7 +43,7 @@ describe('NavComponent', () => {
                     MatSelectModule,
                     MatRadioModule,
                     MatCheckboxModule,
-                    AppModule
+                    AppModule,
                 ],
             }).compileComponents();
 

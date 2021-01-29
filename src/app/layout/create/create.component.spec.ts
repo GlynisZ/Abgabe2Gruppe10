@@ -12,7 +12,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatGridListModule } from '@angular/material/grid-list';
-import {MatIconModule} from '@angular/material/icon';
+import { MatIconModule } from '@angular/material/icon';
 import { AppModule } from 'src/app/app.module';
 import { doesNotMatch } from 'assert';
 
@@ -36,7 +36,7 @@ describe('CreateComponent', () => {
                 BrowserAnimationsModule,
                 MatGridListModule,
                 MatIconModule,
-                AppModule
+                AppModule,
             ],
         }).compileComponents();
     });

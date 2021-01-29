@@ -4,11 +4,11 @@ import { FormsModule } from '@angular/forms';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { By } from '@angular/platform-browser';
 import { MatGridListModule } from '@angular/material/grid-list';
-import {MatFormFieldModule} from '@angular/material/form-field';
-import {MatSelectModule} from '@angular/material/select';
-import {MatRadioModule} from '@angular/material/radio';
-import {MatCheckboxModule} from '@angular/material/checkbox';
-import {MatIconModule} from '@angular/material/icon';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatSelectModule } from '@angular/material/select';
+import { MatRadioModule } from '@angular/material/radio';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatIconModule } from '@angular/material/icon';
 import { AppModule } from 'src/app/app.module';
 
 import { SearchComponent } from './search.component';
@@ -20,7 +20,18 @@ describe('SearchComponent', () => {
     beforeEach(async () => {
         await TestBed.configureTestingModule({
             declarations: [SearchComponent],
-            imports: [HttpClientTestingModule, MatSnackBarModule, MatGridListModule, MatFormFieldModule, MatSelectModule, MatRadioModule, MatCheckboxModule, MatIconModule, FormsModule, AppModule],
+            imports: [
+                HttpClientTestingModule,
+                MatSnackBarModule,
+                MatGridListModule,
+                MatFormFieldModule,
+                MatSelectModule,
+                MatRadioModule,
+                MatCheckboxModule,
+                MatIconModule,
+                FormsModule,
+                AppModule,
+            ],
         }).compileComponents();
     });
 
