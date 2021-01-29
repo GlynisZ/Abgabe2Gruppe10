@@ -1,0 +1,121 @@
+<h1>Neuen Kunden erstellen</h1>
+<h2>Alle Angaben müssen gemacht werden</h2>
+<mat-grid-list [formGroup]="anlegenForm" cols="10" rowHeight="65px">
+  /*stylelint-disable */
+  <mat-grid-tile colspan="1" rowspan="1">Nachname </mat-grid-tile>
+
+  <mat-grid-tile colspan="9" rowspan="1">
+    <mat-form-field class="text-input">
+      <mat-label>Den Nachnamen eingeben</mat-label>
+      <input
+        matInput
+        class="text-nachname"
+        type="text"
+        formControlName="nachname"
+      />
+    </mat-form-field>
+  </mat-grid-tile>
+
+  <mat-grid-tile colspan="1" rowspan="1">Email </mat-grid-tile>
+
+  <mat-grid-tile colspan="9" rowspan="1">
+    <mat-form-field class="text-input">
+      <mat-label>Die Email-Adresse eingeben</mat-label>
+      <input matInput type="email" formControlName="email" />
+    </mat-form-field>
+  </mat-grid-tile>
+
+  <mat-grid-tile colspan="1" rowspan="2">Geburtsdatum </mat-grid-tile>
+
+  <mat-grid-tile colspan="9" rowspan="2">
+    <mat-form-field appearance="fill">
+      <mat-label>Wähle ein Datum aus</mat-label>
+      <input
+        matInput
+        [matDatepicker]="picker"
+        readonly
+        (click)="picker.open()"
+        formControlName="geburtsdatum"
+      />
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+  </mat-grid-tile>
+
+  <mat-grid-tile colspan="1" rowspan="1">Geschlecht </mat-grid-tile>
+  <mat-grid-tile colspan="9" rowspan="1">
+    <mat-form-field class="gender" appearance="fill">
+      <mat-label>Bitte auswählen</mat-label>
+      <mat-select name="geschlecht" formControlName="geschlecht">
+        <mat-option value="M"> männlich </mat-option>
+        <mat-option value="W"> weiblich </mat-option>
+        <mat-option value="D"> divers </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </mat-grid-tile>
+
+  <mat-grid-tile colspan="1" rowspan="2">Familienstand </mat-grid-tile>
+
+  <mat-grid-tile colspan="9" rowspan="2">
+    <mat-radio-group
+      class="radio-group"
+      color="accent"
+      formControlName="familienstand"
+    >
+      <mat-radio-button value="L">Ledig</mat-radio-button>
+      <mat-radio-button value="VH">Verheiratet</mat-radio-button>
+      <mat-radio-button value="VW">Verwitwet</mat-radio-button>
+      <mat-radio-button value="G">Geschieden</mat-radio-button>
+    </mat-radio-group>
+  </mat-grid-tile>
+
+  <mat-grid-tile colspan="1" rowspan="2">Interessen </mat-grid-tile>
+
+  <mat-grid-tile colspan="9" rowspan="2">
+    <div class="interessen">
+      <mat-checkbox formControlName="interesseSport">Sport</mat-checkbox>
+      <mat-checkbox formControlName="interesseLesen">Lesen</mat-checkbox>
+      <mat-checkbox formControlName="interesseReisen">Reisen</mat-checkbox>
+    </div>
+  </mat-grid-tile>
+
+  <mat-grid-tile colspan="1" rowspan="4">Adresse </mat-grid-tile>
+
+  <mat-grid-tile colspan="9" rowspan="4">
+    <div class="text-input">
+      <mat-form-field class="text-input">
+        <mat-label>PLZ</mat-label>
+        <input matInput type="text" formControlName="plz" />
+      </mat-form-field>
+      <mat-form-field class="text-input">
+        <mat-label>Ort</mat-label>
+        <input matInput type="text" formControlName="ort" />
+      </mat-form-field>
+    </div>
+  </mat-grid-tile>
+
+  <mat-grid-tile colspan="1" rowspan="2">Account </mat-grid-tile>
+
+  <mat-grid-tile colspan="9" rowspan="2">
+    <div class="text-input">
+      <mat-form-field class="text-input">
+        <mat-label>Benutzername</mat-label>
+        <input matInput type="text" formControlName="benutzername" />
+      </mat-form-field>
+      <mat-form-field class="text-input">
+        <mat-label>Passwort</mat-label>
+        <input matInput type="password" formControlName="passwort" />
+      </mat-form-field>
+    </div>
+  </mat-grid-tile>
+
+  <mat-grid-tile colspan="1" rowspan="1"> </mat-grid-tile>
+
+  <mat-grid-tile colspan="9" rowspan="1">
+    <button mat-flat-button color="primary" (click)="anlegen()">
+      <mat-icon>person_add</mat-icon>
+      Anlegen
+    </button>
+  </mat-grid-tile>
+  /*stylelint-enable */
+</mat-grid-list>

@@ -1,0 +1,26 @@
+.radio-group {
+  display: flex;
+  flex-direction: column;
+  margin: 15px 0;
+}
+
+.text-input {
+  margin-right: 10px;
+  width: 100%;
+}
+
+/*stylelint-disable*/
+mat-grid-tile > ::ng-deep figure {
+  justify-content: flex-start !important;
+}
+/*stylelint-enable*/
+.gender {
+  display: flex;
+  margin: 15px 0;
+}
+
+.interessen {
+  display: flex;
+  flex-direction: column;
+  margin: 15px 0;
+}
